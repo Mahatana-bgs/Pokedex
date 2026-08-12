@@ -1,0 +1,53 @@
+.app {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+  font-family: system-ui, sans-serif;
+  text-align: center;
+}
+
+.pokemon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.pokemon-card {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 12px;
+  background: #f7f7f7;
+  transition: transform 0.15s ease;
+}
+
+.pokemon-card:hover {
+  transform: translateY(-4px);
+}
+
+.pokemon-id {
+  color: #888;
+  font-size: 0.8rem;
+}
+
+.pokemon-name {
+  text-transform: capitalize;
+  margin: 8px 0;
+}
+
+.type-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  margin: 2px;
+  border-radius: 8px;
+  font-size: 0.7rem;
+  color: white;
+  background: #777;
+  text-transform: capitalize;
+}
+
+.status-message {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 1.2rem;
+}
