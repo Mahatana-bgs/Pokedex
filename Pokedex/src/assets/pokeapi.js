@@ -5,4 +5,12 @@ export async function fetchPokemon(){
     if(!listResponse.ok){
         throw new Error("Failed to fetch the Pokemon list");
     }
+
+    const listData = await listResponse.json();
+
+    const detailedPokemons = await Promise.all(
+        listData.results.map((pokemon) =>
+            fetch(pokemon.url).then((response)=> response.json())
+        )
+    );
 }
