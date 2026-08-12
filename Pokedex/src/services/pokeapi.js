@@ -13,4 +13,5 @@ export async function fetchPokemon(){
             fetch(pokemon.url).then((response)=> response.json())
         )
     );
+    return detailedPokemons;
 }
